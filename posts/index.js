@@ -1,9 +1,11 @@
 const express = require('express');
 const { randomBytes } = require('crypto');
 const bodyParser = require('body-parser')
+const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 const posts = {};
 
@@ -22,4 +24,5 @@ app.post('/posts', (req, res) => {
   res.status(201).send(posts[id]);
 });
 
-app.listen(8000, () => console.log('Listening on 4000'));
+const PORT = 8000;
+app.listen(PORT, () => console.log(`Listening on ${PORT}`));
