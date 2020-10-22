@@ -12,11 +12,12 @@ app.post('/events', (req, res) => {
 
   events.push(event);
 
-  // this is just a poor man's version of eventing for Proof of Concept
-  axios.post('http://localhost:8000/events', event);
-  axios.post('http://localhost:8001/events', event);
-  axios.post('http://localhost:8002/events', event);
-  axios.post('http://localhost:8003/events', event);
+  // this is just a poor man's version of event'ing for Proof of Concept
+
+  axios.post('http://posts-clusterip-serv:8000/events', event); // post
+  axios.post('http://comments-serv:8001/events', event); // comments
+  axios.post('http://query-serv:8002/events', event); // query
+  axios.post('http://moderation-serv:8003/events', event); // moderation
 
   res.send({ status: 'OK' });
 });
