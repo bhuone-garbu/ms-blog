@@ -38,4 +38,7 @@ app.post('/events', (req, res) => {
 });
 
 const PORT = 8000;
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`)
+  console.log('v0.0.1');
+});
