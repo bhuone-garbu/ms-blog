@@ -17,14 +17,6 @@ Really simple tech stack and simple code.
 
 ## Concepts:
 
-These concepts are more important and covered in this repo.
-
-* Micro-services design and philosophy (how they should behave and work)
-* Designing EventBus for async operations
-* Forget monolithic
-* Dockerization of services
-* K8s deployments
-
 The project attempts to build the following different microserices as proof of concept:
 
 * client (React client for FE)
@@ -33,3 +25,11 @@ The project attempts to build the following different microserices as proof of c
 * event-bus (ms)
 * query (ms)
 * moderation (ms)
+
+And the following concepts are covered in this repo:
+
+* Micro-services design and philosophy (how they should behave and work)
+* EventBus and EventStorage for async operations
+* Comparision with monolithic designs
+* Dockerization of services
+* K8s deployments
