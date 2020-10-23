@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: react-client-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: react-client
+  template:
+    metadata:
+      labels:
+        app: react-client
+    spec:
+      containers:
+        - name: react-client
+          image: bhuone/react-client
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-client-serv
+spec:
+  selector:
+    app: react-client
+  ports:
+    - name: react-client
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
