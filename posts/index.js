@@ -14,7 +14,7 @@ app.get('/posts', (req, res) => {
   res.send(posts);
 });
 
-app.post('/posts/create', async (req, res) => {
+app.post('/posts', async (req, res) => {
   const id = randomBytes(4).toString('hex');
   const { title } = req.body;
   
@@ -40,5 +40,4 @@ app.post('/events', (req, res) => {
 const PORT = 8000;
 app.listen(PORT, () => {
   console.log(`Listening on ${PORT}`)
-  console.log('v0.0.1');
 });
