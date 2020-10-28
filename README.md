@@ -1,6 +1,6 @@
 # Bhuwan Garbuja
 
-# Intro
+## Intro
 
 This repo contains experiments for event driven microservice design and development.
 
