@@ -34,3 +34,9 @@ And the following concepts are covered in this repo:
 * Dockerization of services
 * Managing k8s clusters/objects with `kubectl`
 * K8s deployments and dev practices with Skaffold
+
+## Part 2
+
+This next part attempts to build production grade ms by utilizing third party packages when deemed necessary
+
+[GH repo link](https://github.com/bhuone-garbu/ms-ticketing)
